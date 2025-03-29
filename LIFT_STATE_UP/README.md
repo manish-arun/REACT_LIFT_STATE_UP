@@ -112,3 +112,31 @@ Back in VS Code terminal, add the GitHub remote:
 Go to your repository link on GitHub and refresh the page to see your committed code.
 
 Now your React project using Vite is successfully set up and pushed to GitHub! 🚀
+
+----------------------------------------
+
+## Create a New Branch
+#### `git checkout -b "#107953_Hamburger_Menu_Staff_Absence_Module"`
+
+
+## Push the Branch to Azure DevOps
+#### `git push -u origin "#107953_Hamburger_Menu_Staff_Absence_Module" --no-verify`
+
+----------------------------------------
+
+# delete branch locally
+## Safely delete the branch (will only delete if it has been merged)
+#### `git branch -d "#107953_Hamburger_Menu_Staff_Absence_Module-revert-from-main"`
+
+## Force delete the branch (will delete even if it hasn't been merged)
+#### `git branch -D "#107953_Hamburger_Menu_Staff_Absence_Module-revert-from-main"`
+
+# delete branch remotely
+## To delete a branch on the remote repository (Azure DevOps)
+#### `git push origin --delete "#107953_Hamburger_Menu_Staff_Absence_Module-revert-from-main" --no-verify`
+
+# Try to synchronize your branch list using:
+## The -p flag means "prune". After fetching, branches which no longer exist on the remote will be deleted.
+#### `git fetch -p`
+
+----------------------------------------
