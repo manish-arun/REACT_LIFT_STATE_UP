@@ -98,6 +98,7 @@ Do not initialize with a README, .gitignore, or license (we'll add them manually
 Click Create Repository.
 
 ## 4. Connect Local Repo to GitHub :-
+
 Back in VS Code terminal, add the GitHub remote:
 #### `git remote add origin https://github.com/your-username/my-vite-project.git`
 
@@ -109,6 +110,7 @@ Back in VS Code terminal, add the GitHub remote:
 #### `git push -u origin main`
 
 ## 6. Verify on GitHub :-
+
 Go to your repository link on GitHub and refresh the page to see your committed code.
 
 Now your React project using Vite is successfully set up and pushed to GitHub! 🚀
