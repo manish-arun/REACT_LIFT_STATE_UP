@@ -1,0 +1,24 @@
+✅ "Lifting Control to the Parent"
+
+
+🔍 What’s Happening Here?
+The state (isChildStateTrue) is maintained in the parent component.
+The child component doesn’t manage any state itself, but receives:
+The current state value as a prop: childStateValue
+A callback to update it: onChildStateChange
+
+
+📘 This pattern is typically called:
+"Controlled component via lifting state up"
+Or more broadly, “Lifting state up” from child to parent
+
+
+🧠 In Simple Terms:
+You're letting the parent "own" the state, while the child simply reads and triggers updates to it.
+This is useful when:
+Multiple children need to read or update the same state
+The parent needs to make decisions based on that state
+You want more centralized state management
+
+
+
