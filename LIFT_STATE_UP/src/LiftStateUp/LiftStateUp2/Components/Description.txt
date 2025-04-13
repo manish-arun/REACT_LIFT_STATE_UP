@@ -1,0 +1,37 @@
+The pattern we're using in this code is still considered "lifting state up", but it's a more nuanced variant.
+
+
+🧩 What’s Happening Here?
+✅ The child owns the actual state (toggle in ChildComponent)
+✅ The child reports any state change to the parent using a callback (onStateChange)
+✅ The parent listens to the state changes and syncs it into its own state (childState)
+
+
+📛 What Do We Call This Pattern?
+This is commonly referred to as:
+👉 "State Synchronization from Child to Parent"
+or
+👉 "State Lifting via Callback and useEffect"
+or even
+👉 "Child-managed state with upward data flow"
+
+
+🔄 Key Difference vs Traditional Lifting:
+✅ Traditional lifting means the parent owns and controls the state entirely.
+✅ In your case, the child owns the state, and the parent mirrors or reacts to it.
+
+
+🔍 Why Use This Pattern?
+👉 You want encapsulated local state in the child (e.g., toggle UI, form input), but the parent still needs to know about its value (e.g., for conditional rendering, validation, etc.)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+✅ Best Practices Tip
+👉 If you're using TypeScript, it's better to strongly type the props instead of using any. For example:
+
+interface ChildProps {
+  onStateChange: (newState: boolean) => void;
+}
+
+export const ChildComponent: React.FC<ChildProps> = ({ onStateChange }) => {
+  // ...
+};
